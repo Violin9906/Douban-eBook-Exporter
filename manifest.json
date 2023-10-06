@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Douban eBook Exporter",
+  "version": "1.0",
+  "description": "导出豆瓣阅读的电子书",
+  "permissions": ["activeTab", "downloads"],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "images/icon_16x16.png",
+      "48": "images/icon_48x48.png",
+      "128": "images/icon_128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://read.douban.com/reader/ebook/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon_16x16.png",
+    "48": "images/icon_48x48.png",
+    "128": "images/icon_128x128.png"
+  }
+}
